@@ -4,7 +4,7 @@ module HomeHelper
     "My name is <name> and I am wonderful",
     "I work for <company>, the greatest company in town",
     "We should have coffee and discuss <the greatest business idea in the world>",
-    "I am in the <kind of business> business, and I want to "
+    "I am in the <kind of business> business, and I want to <do something great>"
   ]
 
   def mailto_with_subject
