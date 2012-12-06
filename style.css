@@ -1,0 +1,31 @@
+body {
+  width: 640px;
+  margin: 3em auto 3em;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+@media screen and (max-width: 640px) {
+  body {
+    width: 300px; } }
+body a {
+  text-decoration: none; }
+body p {
+  font-size: 18px;
+  line-height: 25px; }
+body ul {
+  margin-top: 1em; }
+body ul li {
+  margin: 0.5em 0;
+  color: #404040; }
+body header {
+  color: #a5a5a5; }
+body header h1 {
+  margin-bottom: -0.25em;
+  font-size: 45px;
+  font-weight: 700; }
+body header h1 a {
+  color: #f6291d; }
+body section p {
+  margin-top: 1.5em;
+  width: 480px; }
+@media screen and (max-width: 640px) {
+  body section p {
+    width: 280px; } }
