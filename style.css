@@ -1,31 +1,119 @@
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:400,600);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic);
+/*==== Mixins ==== */
+.clearfix, header.main, section.content {
+  display: inline-block; }
+.clearfix:after, header.main:after, section.content:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
+html[xmlns] .clearfix, html[xmlns] header.main, html[xmlns] section.content {
+  display: block; }
+
+* html .clearfix, * html header.main, * html section.content {
+  height: 1%; }
+
+.shadow, section.content .box, section.content .box header span {
+  box-shadow: 0px 2px 8px #6e6e6e; }
+
+/*==== Fonts ==== */
+/*==== Variables ==== */
+/*==== Scaffolding ==== */
+html {
+  font-size: 62.5%; }
+
 body {
-  width: 640px;
-  margin: 3em auto 3em;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; }
-@media screen and (max-width: 640px) {
-  body {
-    width: 300px; } }
-body a {
-  text-decoration: none; }
-body p {
-  font-size: 18px;
-  line-height: 25px; }
-body ul {
-  margin-top: 1em; }
-body ul li {
-  margin: 0.5em 0;
-  color: #404040; }
-body header {
-  color: #a5a5a5; }
-body header h1 {
-  margin-bottom: -0.25em;
-  font-size: 45px;
-  font-weight: 700; }
-body header h1 a {
-  color: #f6291d; }
-body section p {
-  margin-top: 1.5em;
-  width: 480px; }
-@media screen and (max-width: 640px) {
-  body section p {
-    width: 280px; } }
+  width: 1140px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  font-family: "Source Sans Pro", sans-serif;
+  background: white;
+  /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, white 0%, #f6f6f6 47%, #ededed 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, white), color-stop(47%, #f6f6f6), color-stop(100%, #ededed));
+  /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, white 0%, #f6f6f6 47%, #ededed 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, white 0%, #f6f6f6 47%, #ededed 100%);
+  /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, white 0%, #f6f6f6 47%, #ededed 100%);
+  /* IE10+ */
+  background: radial-gradient(ellipse at center, white 0%, #f6f6f6 47%, #ededed 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed',GradientType=1 );
+  /* IE6-9 fallback */ }
+
+header.main {
+  width: 100%;
+  margin: 1rem 0;
+  border-bottom: 2px solid #a2a2a2; }
+
+/*==== Structure ==== */
+header.main h1 {
+  float: left;
+  font: normal 5rem "Josefin Slab", serif; }
+header.main h1 .mark .asterisk {
+  color: #cd333f; }
+header.main h1 .name:after {
+  content: ".";
+  color: #cd333f; }
+header.main .info {
+  float: right;
+  margin-top: 25px; }
+header.main .info a {
+  font-size: 40px;
+  text-decoration: none;
+  color: #a2a2a2; }
+
+.quote {
+  margin: 6rem 0;
+  text-align: center;
+  font: italic 2.6rem "Source Sans Pro", sans-serif; }
+
+section.content .box {
+  float: left;
+  width: 27%;
+  margin: 0 3%;
+  text-align: center; }
+section.content .box.development header {
+  background-color: #00a0b0; }
+section.content .box.lean-startup header {
+  background-color: #ec6841; }
+section.content .box.technical-advice header {
+  background-color: #edc951; }
+section.content .box header {
+  position: relative;
+  padding: 0.1rem 0 2rem 0;
+  border-bottom: 2px solid black;
+  font-family: "Josefin Slab", serif; }
+section.content .box header h1 {
+  text-transform: lowercase;
+  font-size: 2.2rem; }
+section.content .box header h1:after {
+  content: "."; }
+section.content .box header span {
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  padding: 1.2rem;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold; }
+section.content .box .description {
+  height: 21rem;
+  padding: 2rem;
+  background-color: #f9f6e4;
+  font-size: 1.8rem; }
+
+/*==== Media Queries ==== */
+/*==== Small Layout (320px) ==== */
+/*==== Medium Layout (600px) ==== */
+/*==== Fullscreen Layout (1280px) ==== */

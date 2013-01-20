@@ -1,52 +1,63 @@
+!!!
 %html
   %head
-    %title Five Day Prototype
-    %link{:href => "http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap-responsive.min.css", :rel => "stylesheet"}
-    %link{:href => "style.css", :rel => "stylesheet"}
-
+    %title Shiplington - An Indianapolis Web Development and Lean Startup Consultancy
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+    %meta{:content => "Shiplington provides top-tier software development and startup advice based on extensive experience with early-stage startups and the web.", :name => "description"}
+    %link{:charset => "utf-8", :href => "style.css", :media => "screen", :rel => "stylesheet", :title => "no title", :type => "text/css"}
+    %link{:charset => "utf-8", :href => "font-awesome.css", :rel => "stylesheet", :title => "no title", :type => "text/css"}
   %body
-    %header
+    %header.main
       %h1
-        %a{ href: '/' } Welcome to Shiplington
+        %span.mark
+          [<span class="asterisk">*</span>]
+        %span.name shiplington
 
-      %p
-        The happiest consultancy on Earth!
-
-    %section
-      %p
-        My name is Kyle Shipley, and I like to solve problems.
-
-      %p
-        If you're a startup or small business looking to increase profits,
-        find your market, or just establish an online presence,
-        = succeed '.' do
-          %a{ href: 'mailto:kyle@shiplington.com' } I'd love to help you
-
-      %p
-        I believe that <strong>good business is more than good
-        technology</strong>. I will work with you to understand
-        the challenges you face in creating, marketing, and
-        profiting from your idea. Software accelerates success,
-        but there is nothing more important than <strong>solving
-        real problems for your customers</strong>.
+      .info
+        %a{:href => "mailto:kyle@shiplington.com"}
+          %i.icon-envelope-alt
+        %a{:href => "http://www.twitter.com/kyleashipley"}
+          %i.icon-twitter-sign
+        %a{:href => "http://www.linkedin.com/pub/kyle-shipley/6/b02/603"}
+          %i.icon-linkedin-sign
           
-      %p
-        I spend most of my time building web applications
-        in Ruby on Rails, although you will sometimes find me
-        on the iOS or Arduino. I am the creator of
-        = succeed ',' do
-          %a{ href: 'http://www.awesomecontroller.com/' } Awesome Controller
-        winner of Startup Weekend Indy for Fall 2011.
+    %p.quote
+      Launching a new product is challenging. Get started on the right foot.
+    
+    %section.content
 
-      %p
-        You can find me around the web on
-        %a{ href: 'http://www.linkedin.com/pub/kyle-shipley/6/b02/603' } LinkedIn
-        or
-        = succeed '.' do
-          %a{ href: 'https://twitter.com/#!/kyleashipley' } Twitter
+      .box.development
+        %header
+          %h1 Development
+          %span [_]
+        .description
+          %p
+            I make web applications, usually in Ruby on Rails and JavaScript. I do some iOS and Arduino work as well.
+          %p
+            I love learning new things, so don't be shy if you're using something new and different.
 
-      %p
-        %a{ href: 'mailto:kyle@shiplington.com' } Send me a note
-        or give me a call at (678) SHIP-LLC
-        &mdash; that's (678) 744-7552 &mdash;
-        and let's see if we're a good fit!
+      .box.lean-startup
+        %header
+          %h1 Lean Startup
+          %span [?]
+        .description
+          %p
+            You need to find customers fast. I specialize in running experiments to help you achieve product/market fit.
+          %p
+            I can help you make your first dollar or improve your product for existing customers.
+
+      .box.technical-advice
+        %header
+          %h1 Technical Advice
+          %span [>]
+        .description
+          %p
+            There are too many languages and too few developers. I can help you plan your technology stack and interview potential employees.
+          %p
+            Good hiring is critical to your success. I'll help find the right fit for your team.
+
+    %section#bottom
+      .quote{:style => "padding: 0 0 4% 0 !important;"}
+        %div Want to work with someone who understands your business as well as your software?
+        %div
+          %a{:href => "mailto:kyle@shiplington.com"} Get in touch.
