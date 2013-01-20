@@ -8,7 +8,6 @@
     visibility: hidden
     line-height: 0
     height: 0
-  display: inline-block
 
 html[xmlns] .clearfix
   display: block
@@ -93,15 +92,17 @@ header.main
   text-align: center
   font: italic 2.6rem 'Source Sans Pro', sans-serif
 
-section.content
+.content
   @extend .clearfix
 
   .box
     @extend .shadow
     float: left
-    width: 27%
-    margin: 0 3%
+    width: 30%
     text-align: center
+
+    &:nth-child(2)
+      margin: 0 5%
 
     &.development header
       background-color: #00a0b0
@@ -145,13 +146,38 @@ section.content
 
 /*==== Media Queries ====
 /*==== Small Layout (320px) ====
-@media screen and (min-width: 320px)
-  
+@media screen and (min-width: 320px) and (max-width: 599px)
+  body
+    width: 320px
+
+  header.main
+    text-align: center
+
+    h1, .info
+      float: none
+
+  .content
+    .box
+      float: none
+      width: 100%
+      margin-bottom: 5rem
+
+      &:nth-child(2)
+        margin: 0 0 5rem 0
 
 /*==== Medium Layout (600px) ====
-@media screen and (min-width: 600px)
-  
+@media screen and (min-width: 600px) and (max-width: 1139px)
+  body
+    width: 600px
 
-/*==== Fullscreen Layout (1280px) ====
-@media screen and (min-width: 1280px)
+  .content
+    .box
+      width: 47%
+      margin-bottom: 5rem
+
+      &:nth-child(2)
+        margin: 0 3% 5rem 3%
+
+      &:last-child
+        margin: 0 25%
   

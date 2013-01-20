@@ -1,9 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Josefin+Slab:400,600);
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic);
 /*==== Mixins ==== */
-.clearfix, header.main, section.content {
-  display: inline-block; }
-.clearfix:after, header.main:after, section.content:after {
+.clearfix:after, header.main:after, .content:after {
   content: ".";
   display: block;
   clear: both;
@@ -11,13 +9,13 @@
   line-height: 0;
   height: 0; }
 
-html[xmlns] .clearfix, html[xmlns] header.main, html[xmlns] section.content {
+html[xmlns] .clearfix, html[xmlns] header.main, html[xmlns] .content {
   display: block; }
 
-* html .clearfix, * html header.main, * html section.content {
+* html .clearfix, * html header.main, * html .content {
   height: 1%; }
 
-.shadow, section.content .box, section.content .box header span {
+.shadow, .content .box, .content .box header span {
   box-shadow: 0px 2px 8px #6e6e6e; }
 
 /*==== Fonts ==== */
@@ -76,28 +74,29 @@ header.main .info a {
   text-align: center;
   font: italic 2.6rem "Source Sans Pro", sans-serif; }
 
-section.content .box {
+.content .box {
   float: left;
-  width: 27%;
-  margin: 0 3%;
+  width: 30%;
   text-align: center; }
-section.content .box.development header {
+.content .box:nth-child(2) {
+  margin: 0 5%; }
+.content .box.development header {
   background-color: #00a0b0; }
-section.content .box.lean-startup header {
+.content .box.lean-startup header {
   background-color: #ec6841; }
-section.content .box.technical-advice header {
+.content .box.technical-advice header {
   background-color: #edc951; }
-section.content .box header {
+.content .box header {
   position: relative;
   padding: 0.1rem 0 2rem 0;
   border-bottom: 2px solid black;
   font-family: "Josefin Slab", serif; }
-section.content .box header h1 {
+.content .box header h1 {
   text-transform: lowercase;
   font-size: 2.2rem; }
-section.content .box header h1:after {
+.content .box header h1:after {
   content: "."; }
-section.content .box header span {
+.content .box header span {
   position: absolute;
   top: 60%;
   left: 40%;
@@ -107,7 +106,7 @@ section.content .box header span {
   color: white;
   font-size: 3rem;
   font-weight: bold; }
-section.content .box .description {
+.content .box .description {
   height: 21rem;
   padding: 2rem;
   background-color: #f9f6e4;
@@ -115,5 +114,30 @@ section.content .box .description {
 
 /*==== Media Queries ==== */
 /*==== Small Layout (320px) ==== */
+@media screen and (min-width: 320px) and (max-width: 599px) {
+  body {
+    width: 320px; }
+
+  header.main {
+    text-align: center; }
+  header.main h1, header.main .info {
+    float: none; }
+
+  .content .box {
+    float: none;
+    width: 100%;
+    margin-bottom: 5rem; }
+  .content .box:nth-child(2) {
+    margin: 0 0 5rem 0; } }
 /*==== Medium Layout (600px) ==== */
-/*==== Fullscreen Layout (1280px) ==== */
+@media screen and (min-width: 600px) and (max-width: 1139px) {
+  body {
+    width: 600px; }
+
+  .content .box {
+    width: 47%;
+    margin-bottom: 5rem; }
+  .content .box:nth-child(2) {
+    margin: 0 3% 5rem 3%; }
+  .content .box:last-child {
+    margin: 0 25%; } }
