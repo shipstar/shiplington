@@ -15,7 +15,7 @@ html[xmlns] .clearfix, html[xmlns] header.main, html[xmlns] .content {
 * html .clearfix, * html header.main, * html .content {
   height: 1%; }
 
-.shadow, .content .box, .content .box header span {
+.shadow, .content article, .content article header span {
   box-shadow: 0px 2px 8px #6e6e6e; }
 
 /*==== Fonts ==== */
@@ -25,8 +25,8 @@ html {
   font-size: 62.5%; }
 
 body {
-  width: 1140px;
   margin: 0 auto;
+  width: 1140px;
   box-sizing: border-box;
   font-size: 1.4rem;
   font-family: "Source Sans Pro", sans-serif;
@@ -74,29 +74,29 @@ header.main .info a {
   text-align: center;
   font: italic 2.6rem "Source Sans Pro", sans-serif; }
 
-.content .box {
+.content article {
   float: left;
   width: 30%;
   text-align: center; }
-.content .box:nth-child(2) {
+.content article:nth-child(2) {
   margin: 0 5%; }
-.content .box.development header {
+.content article.development header {
   background-color: #00a0b0; }
-.content .box.lean-startup header {
+.content article.lean-startup header {
   background-color: #ec6841; }
-.content .box.technical-advice header {
+.content article.technical-advice header {
   background-color: #edc951; }
-.content .box header {
+.content article header {
   position: relative;
   padding: 0.1rem 0 2rem 0;
   border-bottom: 2px solid black;
   font-family: "Josefin Slab", serif; }
-.content .box header h1 {
+.content article header h1 {
   text-transform: lowercase;
   font-size: 2.2rem; }
-.content .box header h1:after {
+.content article header h1:after {
   content: "."; }
-.content .box header span {
+.content article header span {
   position: absolute;
   top: 60%;
   left: 40%;
@@ -106,7 +106,7 @@ header.main .info a {
   color: white;
   font-size: 3rem;
   font-weight: bold; }
-.content .box .description {
+.content article .description {
   height: 21rem;
   padding: 2rem;
   background-color: #f9f6e4;
@@ -123,21 +123,21 @@ header.main .info a {
   header.main h1, header.main .info {
     float: none; }
 
-  .content .box {
+  .content article {
     float: none;
     width: 100%;
     margin-bottom: 5rem; }
-  .content .box:nth-child(2) {
+  .content article:nth-child(2) {
     margin: 0 0 5rem 0; } }
 /*==== Medium Layout (600px) ==== */
 @media screen and (min-width: 600px) and (max-width: 1139px) {
   body {
     width: 600px; }
 
-  .content .box {
+  .content article {
     width: 47%;
     margin-bottom: 5rem; }
-  .content .box:nth-child(2) {
+  .content article:nth-child(2) {
     margin: 0 3% 5rem 3%; }
-  .content .box:last-child {
+  .content article:last-child {
     margin: 0 25%; } }
