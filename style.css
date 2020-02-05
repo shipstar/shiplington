@@ -1,143 +1,238 @@
+/*==== Fonts ====*/
 @import url(http://fonts.googleapis.com/css?family=Josefin+Slab:400,600);
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic);
-/*==== Mixins ==== */
-.clearfix:after, header.main:after, .content:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0; }
 
-html[xmlns] .clearfix, html[xmlns] header.main, html[xmlns] .content {
-  display: block; }
-
-* html .clearfix, * html header.main, * html .content {
-  height: 1%; }
-
-.shadow, .content article, .content article header span {
-  box-shadow: 0px 2px 8px #6e6e6e; }
-
-/*==== Fonts ==== */
-/*==== Variables ==== */
-/*==== Scaffolding ==== */
-html {
-  font-size: 62.5%; }
-
+/*==== Scaffolding ====*/
 body {
-  margin: 0 auto;
-  width: 1140px;
-  box-sizing: border-box;
-  font-size: 1.4rem;
-  font-family: "Source Sans Pro", sans-serif;
-  background: white;
-  /* Old browsers */
-  background: -moz-radial-gradient(center, ellipse cover, white 0%, #f6f6f6 47%, #ededed 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, white), color-stop(47%, #f6f6f6), color-stop(100%, #ededed));
-  /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover, white 0%, #f6f6f6 47%, #ededed 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(center, ellipse cover, white 0%, #f6f6f6 47%, #ededed 100%);
-  /* Opera 12+ */
-  background: -ms-radial-gradient(center, ellipse cover, white 0%, #f6f6f6 47%, #ededed 100%);
-  /* IE10+ */
-  background: radial-gradient(ellipse at center, white 0%, #f6f6f6 47%, #ededed 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed',GradientType=1 );
-  /* IE6-9 fallback */ }
+  min-width: 320px;
+  background: #ffffff; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=1 ); /* IE6-9 fallback */
+}
 
-header.main {
-  width: 100%;
-  margin: 1rem 0;
-  border-bottom: 2px solid #a2a2a2; }
+header {
+  min-height: 90px;
+  border-bottom-color: #a2a2a2;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  text-align: center;
+}
 
-/*==== Structure ==== */
-header.main h1 {
+#top {
+  position: relative;
+	min-height: 200px;
+	max-width: 1300px;
+  margin: 50px auto;
+  padding: 0 6% 0 6%;
+}
+
+#middle {
+  position: relative;
+  text-align: center;
+}
+
+#bottom {
+  position: relative;
+	max-width: 1300px;
+  margin: 20px auto;
+  padding: 0 6% 2% 6%;
+}
+
+/*==== Structure ====*/
+.logo{
   float: left;
-  font: normal 5rem "Josefin Slab", serif; }
-header.main h1 .mark .asterisk {
-  color: #cd333f; }
-header.main h1 .name:after {
-  content: ".";
-  color: #cd333f; }
-header.main .info {
+  display: inline-block;
+  min-height: 55px;
+  font-family: 'Josefin Slab', serif;
+  font-size: 3em;
+  color: #000000;
+}
+
+.info {
   float: right;
-  margin-top: 25px; }
-header.main .info a {
-  font-size: 40px;
-  text-decoration: none;
-  color: #a2a2a2; }
+  margin-top: 25px;
+}
+  .info a {
+    font-size: 40px;
+    text-decoration: none;
+    color: #a2a2a2;
+  }
 
 .quote {
-  margin: 6rem 0;
   text-align: center;
-  font: italic 2.6rem "Source Sans Pro", sans-serif; }
+  font-style: italic;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding-top: 50px;
+}
 
-.content article {
-  float: left;
-  width: 30%;
-  text-align: center; }
-.content article:nth-child(2) {
-  margin: 0 5%; }
-.content article.development header {
-  background-color: #00a0b0; }
-.content article.lean-startup header {
-  background-color: #ec6841; }
-.content article.technical-advice header {
-  background-color: #edc951; }
-.content article header {
+.content {
+  width: 90%;
+  margin: 15% auto;
+  padding-top: 10px;
+  font-size: 1em;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.content-box {
   position: relative;
-  padding: 0.1rem 0 2rem 0;
-  border-bottom: 2px solid black;
-  font-family: "Josefin Slab", serif; }
-.content article header h1 {
-  text-transform: lowercase;
-  font-size: 2.2rem; }
-.content article header h1:after {
-  content: "."; }
-.content article header span {
-  position: absolute;
-  top: 60%;
-  left: 40%;
-  padding: 1.2rem;
-  border-radius: 50%;
-  background-color: black;
-  color: white;
-  font-size: 3rem;
-  font-weight: bold; }
-.content article .description {
-  height: 21rem;
-  padding: 2rem;
+  vertical-align: top;
+  overflow: hidden;
+  display: inline-block;
   background-color: #f9f6e4;
-  font-size: 1.8rem; }
+  width: 300px;
+  height: 360px;
+  margin: 0 4% 4% 4%;
+}
+  .content-header {
+    border-bottom-color: #000000;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    height: 85px;
+    width: auto;
+    text-align: center;
+    font-family: 'Josefin Slab', serif;
+  }
+    .content-header > div {
+      font-size: 25px;
+      font-weight: bold;
+      padding-top: 15px;
+    }
 
-/*==== Media Queries ==== */
-/*==== Small Layout (320px) ==== */
-@media screen and (min-width: 320px) and (max-width: 599px) {
-  body {
-    width: 320px; }
+.circle {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  margin-left: -30px;
+  border-radius: 50%;
+  background-color: #000000;
+  width: 60px;
+  height: 60px;
+}
+  .circle > span {
+    font-size: 2em;
+    line-height: 1.9em;
+    color: #ffffff;
+    font-family: 'Josefin Slab', serif;
+    font-weight: bold;
+  }
 
-  header.main {
-    text-align: center; }
-  header.main h1, header.main .info {
-    float: none; }
+.shadow {
+  box-shadow: 0px 2px 8px #6e6e6e;
+}
 
-  .content article {
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+html[xmlns] .clearfix {
+	display: block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+/*==== Media Queries ====*/
+/*==== Small Layout (320px) ====*/
+@media screen and (min-width: 320px) {
+  #top { padding: 0 2% 0 2%;}
+  header { min-height: 80px;}
+  .logo {
+    font-size: 3em;
     float: none;
-    width: 100%;
-    margin-bottom: 5rem; }
-  .content article:nth-child(2) {
-    margin: 0 0 5rem 0; } }
-/*==== Medium Layout (600px) ==== */
-@media screen and (min-width: 600px) and (max-width: 1139px) {
-  body {
-    width: 600px; }
+  }
+  .content-box {
+    width: 260px;
+    min-height: 295px;
+    margin: 0 3% 5% 3%;
+  }
+  .info {
+    float: none;
+    margin-top: 5px;
+  }
+  .content {
+    font-size: 1em;
+    padding-top: 10px;
+  }
+  .circle { top: 18%;}
+  .content-header > div {font-size: 1.4em;}
+  .quote {font-size: 1.5em;}
+  .circle > span {
+    font-size: 1.8em;
+    line-height: 2.1em;
+  }
+}
 
-  .content article {
-    width: 47%;
-    margin-bottom: 5rem; }
-  .content article:nth-child(2) {
-    margin: 0 3% 5rem 3%; }
-  .content article:last-child {
-    margin: 0 25%; } }
+/*==== Medium Layout (600px) ====*/
+@media screen and (min-width: 600px) {
+  #top { padding: 0 4% 0 4%;}
+  header { min-height: 90px;}
+  .logo {
+    font-size: 3.5em;
+    float: left;
+  }
+  .content-box {
+    width: 280px;
+    height: 315px;
+    margin: 0 3% 3% 3%;
+  }
+  .info {
+    float: right;
+    margin-top: 25px;
+  }
+  .content {
+    font-size: 1em;
+    padding-top: 10px;
+  }
+  .circle { top: 18%;}
+  .content-header > div {font-size: 1.4em;}
+  .quote {font-size: 1.6em;}
+  .circle > span {
+    font-size: 1.8em;
+    line-height: 2.1em;
+  }
+}
+
+/*==== Fullscreen Layout (1280px) ====*/
+@media screen and (min-width: 1280px) {
+  #top { padding: 0 6% 0 6%;}
+  header { min-height: 90px;}
+  .logo {
+    font-size: 3.5em;
+    float: left;
+  }
+  .content-box {
+    width: 300px;
+    height: 360px;
+    margin: 0 4% 4% 4%;
+  }
+  .info {
+    float: right;
+    margin-top: 25px;
+  }
+  .content {
+    font-size: 1.1em;
+    padding-top: 0px;
+  }
+  .circle { top: 16%;}
+  .content-header > div {font-size: 1.6em;}
+  .quote {font-size: 1.8em;}
+  .circle > span {
+    font-size: 2em;
+    line-height: 1.9em;
+  }
+}
